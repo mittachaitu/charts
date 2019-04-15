@@ -16,12 +16,14 @@ spec:
     matchLabels:
       app: {{ template "openebs.name" . }}
       release: {{ .Release.Name }}
+      version: {{ .Values.openebs.version }}
   template:
     metadata:
       labels:
         app: {{ template "openebs.name" . }}
         release: {{ .Release.Name }}
         component: apiserver
+        version: {{ .Values.openebs.version }}
     spec:
       serviceAccountName: {{ template "openebs.serviceAccountName" . }}
       containers:

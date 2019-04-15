@@ -13,6 +13,9 @@ serviceAccount:
 image:
   pullPolicy: IfNotPresent
 
+openebs:
+  version: 0.8.2
+
 apiserver:
   image: "quay.io/openebs/m-apiserver"
   imageTag: "0.8.2"
